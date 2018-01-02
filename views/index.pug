@@ -1,0 +1,15 @@
+extends layout.pug
+
+block content
+    p Hey there
+    ul
+        each val in data[0]
+            li= val
+
+    ul
+        each val in data[1]
+            li= val
+
+    ul
+        each val in data[2]
+            li= val
