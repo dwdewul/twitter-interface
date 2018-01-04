@@ -9,8 +9,7 @@ This project uses calls to [Twitter's API](https://developer.twitter.com/en.html
 ## How to use
 1. Set up a developer account at [Twitter](https://apps.twitter.com/)
 2. `git clone` this repo to your local machine
-3. Create a config.js folder in the directory
-⋅⋅1. The structure should look like this:
+3. Create a config.js folder in the directory. The structure should look like this:
     ```
     module.exports = {
     consumerKey: 'gdghdgfdhfdhfdh',
