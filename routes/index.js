@@ -21,6 +21,7 @@ const getTweets = () => {
     return client.get('statuses/user_timeline', queryParams)
         .then((tweets) => {
             let myTweets = [];
+            // only return the data that we need
             tweets.map(val => {
                 myTweets.push({
                     time: moment(val.created_at).fromNow(),
@@ -50,6 +51,7 @@ const getMessages = () => {
     return client.get('direct_messages', queryParams)
         .then((messages) => {
             let directMessages = [];
+            // only return the data that we need
             messages.map(val => {
                 directMessages.push({
                     messageTime: moment(val.created_at).fromNow(),
@@ -66,6 +68,8 @@ const getMessages = () => {
 };
 
 router.get('/', (req, res) => {
+    // Make sure all promises resolve, then pass that 
+    // chunked data to the PUG template
     Promise.all([getTweets(), getFriends(), getMessages()])
     .then(data => {
         res.render(path.join('../views', 'index'), { data, moment });
