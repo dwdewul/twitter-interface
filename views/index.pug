@@ -64,7 +64,7 @@ block content
             a  @#{data[2][0].senderScreenName}
           ul.app--message--conversation
             each val in data[2]
-              if (val.senderScreenName=='dwdewul')
+              if (val.senderScreenName == data[2][0].senderScreenName)
                 li.app--message
                   .app--avatar(style=`background-image: url(${val.recipientProfilePic})`)
                     img(src=val.recipientProfilePic)
