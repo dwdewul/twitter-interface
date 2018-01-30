@@ -13,8 +13,7 @@ const client = new Twitter({
 
 // query params for every API call
 const queryParams = {
-    count: 5,
-    screen_name: 'dwdewul'
+    count: 5
 }
 
 const getTweets = () => {
